@@ -16,6 +16,6 @@ jobs:
     - name: Build with Maven
       run: mvn -B package --file pom.xml
     - name: token
-      run: echo {{GITHUB_TOKEN}}
+      run: echo ${{GITHUB_TOKEN}}
     - name: Upload artifact
       run: mvn -B deploy --file pom.xml -Dregistry=https://maven.pkg.github.com/zhaoying818 -Dtoken=GITHUB_TOKEN
